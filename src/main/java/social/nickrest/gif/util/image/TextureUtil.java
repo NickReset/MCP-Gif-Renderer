@@ -79,15 +79,10 @@ public class TextureUtil {
     }
 
     public static BufferedImage resize(BufferedImage image, int width, int height) {
-        for(int w = 0; w < image.getWidth(); w++) {
-            for(int h = 0; h < image.getHeight(); h++) {
-                if(w > width || h > height) {
-                    image.setRGB(w, h, 0);
-                }
-            }
-        }
+        BufferedImage resizedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+        resizedImage.getGraphics().drawImage(image, 0, 0, width, height, null);
 
-        return image;
+        return resizedImage;
     }
 
     public static void deleteTexture(int textureID) {

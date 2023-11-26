@@ -7,7 +7,6 @@ this is an example of how to use the library
 public class Example extends GuiScreen {
 
     private final GifRenderer gifRenderer;
-    private float x, y;
 
     public GifScreen(String location) {
         this.gifRenderer = new GifRenderer(new ResourceLocation(location));
@@ -20,7 +19,7 @@ public class Example extends GuiScreen {
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
-        this.gifRenderer.render(this.x, this.y, this.gifRenderer.getWidth() this.gifRenderer.getHeight());
+        this.gifRenderer.render(0, 0, this.gifRenderer.getWidth() this.gifRenderer.getHeight());
     }
 
     @Override

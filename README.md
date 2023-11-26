@@ -34,4 +34,4 @@ public class Example extends GuiScreen {
     }
 }
 ```
-You can check another example [here](src/main/java/example/Example.java)
+You can check another example [here](https://github.com/NickReset/MCP-Gif-Renderer/blob/main/src/main/java/example/Example.java)
